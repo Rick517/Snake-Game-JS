@@ -57,7 +57,7 @@ function reset() {
 function randomPosition() {
     // NOTE plus one because max(random) < 1
     b1 = Math.floor(Math.random() * i); b2 = Math.floor(Math.random() * i);
-    while (b1 === x && b2 === y) { // x and y are initial position != initial berry
+    while (b1 === x && b2 === y || seen[y][x]) { // x and y are initial position != initial berry
         b1 = Math.floor(Math.random() * i); b2 = Math.floor(Math.random() * i);
     }
 }
