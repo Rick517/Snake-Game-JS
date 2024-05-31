@@ -66,7 +66,10 @@ function randomPosition() {
 
 
 
-
+/* 
+TODO create a timeout that activates after every changing of direction
+and restricts next direction changing for speed time. 
+This is done in order to prevent simulteneous up right down which will close the game. */
 function direction(event) {
     // NOTE coordinates are swapped because biggest index in the bottom corner
     // Additional conditions for not changing opposite direction
