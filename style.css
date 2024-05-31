@@ -1,0 +1,123 @@
+:root {
+    --green-color: #0d9c25;
+    --orange-color: #ff6700;
+    --red-color: #c30505;
+
+    --star: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.play-buttons {
+    width: 16.5rem;
+}
+
+.level-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;;
+}
+
+.container {
+    border:none;
+    width: 25%;
+    /* NOTE em cannot be negative */
+    padding: 0 0 0.4em 0;
+    border-radius: 0.35em;
+    transition: all .15s;
+    box-shadow: 0 0 0.1rem 0.1rem rgba(0,0,0,0.15)
+}
+
+.container:active, .active-container {
+    margin-top: 0.31em;
+    padding-bottom: 0.07em;
+    opacity: 0.8;
+}
+
+.container:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.level-buttons .c1 {
+    background-color: var(--green-color);
+    color:var(--green-color)
+}
+
+.level-buttons .c2 {
+    background-color: var(--orange-color);
+    color:var(--orange-color)
+}
+
+.level-buttons .c3 {
+    background-color: var(--red-color);
+    color:var(--red-color)
+}
+
+.mini-container {
+    border-radius: 0.35em;
+    margin: .125em .145em .125em .125em;
+    padding-bottom: 0.15em;
+    background-color: white;
+    text-align: center;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-block: 3px;
+}
+
+.star {
+    width: 16px;
+    height: 16px;
+    clip-path: var(--star);
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.stars .back-level::after {
+    width:8px;
+    height:8px;
+    background-color: white;
+    position:absolute;
+    content: "";
+    clip-path: var(--star);
+}
+
+.level {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Roboto;
+}
+
+.start {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.7em;
+    width: 100%;
+}
+
+.start-but {
+    background-color: #F4B800;
+    color: #F4B800;
+    border: none;
+    width: 50%;
+    padding: 0.1em 0.4em 0.4em 0.05em;
+    text-align: center;
+    cursor:pointer;
+}
+
+.start-but:focus {
+    outline: none;
+}
+
+.start-but div {
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 100%;
+}
+
