@@ -26,7 +26,7 @@ function generate(d) {
 function reset() {
     alert(score);
     maxScoreElement = document.getElementById('max-score');
-    let maxScore = parseInt(maxScoreElement.innerHTML.slice(10);
+    let maxScore = parseInt(maxScoreElement.innerHTML.slice(10));
     maxScoreElement.innerHTML = 'Max score: ' + String(Math.max(score, maxScore));
     scoreElement.innerHTML = 'Score: 0';
 
